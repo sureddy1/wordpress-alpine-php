@@ -216,6 +216,7 @@ chown nginx:nginx /run/php/php-fpm.sock
 chmod 777 /run/php/php-fpm.sock
 
 sed -i "s/SSH_PORT/$SSH_PORT/g" /etc/ssh/sshd_config
+sed -i "s/NGINX_PORT/$PORT/g" /etc/nginx/conf.d/default.conf
 echo "Starting SSH ..."
 echo "Starting php-fpm ..."
 echo "Starting Nginx ..."
